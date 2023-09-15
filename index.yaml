@@ -1,9 +1,35 @@
 apiVersion: v1
 entries:
+  external-dns:
+  - annotations:
+      category: DeveloperTools
+    apiVersion: v2
+    appVersion: 0.7.4
+    created: "2023-09-15T17:52:56.604685+10:00"
+    description: ExternalDNS is a Kubernetes addon that configures public DNS servers
+      with information about exposed Kubernetes services to make them discoverable.
+    digest: cc47466275e55101d7c26caea4fafb6b942cc4d2e040b533ccffdcd2aef79942
+    home: https://github.com/bitnami/charts/tree/master/bitnami/external-dns
+    icon: https://bitnami.com/assets/stacks/external-dns/img/external-dns-stack-110x117.png
+    keywords:
+    - external-dns
+    - network
+    - dns
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: external-dns
+    sources:
+    - https://github.com/kubernetes-sigs/external-dns
+    - https://github.com/bitnami/bitnami-docker-external-dns
+    - https://github.com/kubernetes-sigs/external-dns
+    urls:
+    - https://anrajme.github.io/helm-chart/external-dns-4.0.0.tgz
+    version: 4.0.0
   helm-chart-test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-09-15T16:43:27.582455+10:00"
+    created: "2023-09-15T17:52:56.605175+10:00"
     description: A Helm chart for Kubernetes
     digest: 4a2e93c05c126425c6a31b3ac5fea1cf4d9726f1fb38b9845fe923824a7c6ea5
     name: helm-chart-test
@@ -11,15 +37,98 @@ entries:
     urls:
     - https://anrajme.github.io/helm-chart/helm-chart-test-0.1.0.tgz
     version: 0.1.0
-  redis:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-09-15T16:43:27.582819+10:00"
-    description: A Helm chart for Kubernetes
-    digest: eafa172633f6d54dd4c8528c8d3a75940e8849890bfd71e82ed4db62b955958e
-    name: redis
-    type: application
+  mongodb:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 4.4.1
+    created: "2023-09-15T17:52:56.607317+10:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: NoSQL document-oriented database that stores JSON-like documents
+      with dynamic schemas, simplifying the integration of data in content-driven
+      applications.
+    digest: ca5581ee21a041cd8694c6623b4493ddf0983adf5f79965499b54599cad527d1
+    home: https://github.com/bitnami/charts/tree/master/bitnami/mongodb
+    icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+    keywords:
+    - mongodb
+    - database
+    - nosql
+    - cluster
+    - replicaset
+    - replication
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: mongodb
+    sources:
+    - https://github.com/bitnami/bitnami-docker-mongodb
+    - https://mongodb.org
     urls:
-    - https://anrajme.github.io/helm-chart/redis-0.1.0.tgz
-    version: 0.1.0
-generated: "2023-09-15T16:43:27.582007+10:00"
+    - https://anrajme.github.io/helm-chart/mongodb-10.0.1.tgz
+    version: 10.0.1
+  rabbitmq:
+  - annotations:
+      category: Infrastructure
+    apiVersion: v2
+    appVersion: 3.8.9
+    created: "2023-09-15T17:52:56.60979+10:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Open source message broker software that implements the Advanced
+      Message Queuing Protocol (AMQP)
+    digest: 8529120ba0a55a209ebf3cedbfa4d08f3459702f94a197dd8d1071e612594b42
+    home: https://github.com/bitnami/charts/tree/master/bitnami/rabbitmq
+    icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
+    keywords:
+    - rabbitmq
+    - message queue
+    - AMQP
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: rabbitmq
+    sources:
+    - https://github.com/bitnami/bitnami-docker-rabbitmq
+    - https://www.rabbitmq.com
+    urls:
+    - https://anrajme.github.io/helm-chart/rabbitmq-8.0.2.tgz
+    version: 8.0.2
+  redis:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 6.0.9
+    created: "2023-09-15T17:52:56.612032+10:00"
+    description: Open source, advanced key-value store. It is often referred to as
+      a data structure server since keys can contain strings, hashes, lists, sets
+      and sorted sets.
+    digest: a60bbde67a65884da8efff9f5d2bcfdae9c89fbcdcaccff9b45b74c941011c11
+    home: https://github.com/bitnami/charts/tree/master/bitnami/redis
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: redis
+    sources:
+    - https://github.com/bitnami/bitnami-docker-redis
+    - http://redis.io/
+    urls:
+    - https://anrajme.github.io/helm-chart/redis-12.3.2.tgz
+    version: 12.3.2
+generated: "2023-09-15T17:52:56.602283+10:00"
