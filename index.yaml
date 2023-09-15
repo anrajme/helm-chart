@@ -3,12 +3,23 @@ entries:
   helm-chart-test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-09-15T16:27:18.676007+10:00"
+    created: "2023-09-15T16:43:27.582455+10:00"
     description: A Helm chart for Kubernetes
-    digest: 3571195dccec21412143ef6482e1c97352d4c7069649361358d7cb53a2c2f904
+    digest: 4a2e93c05c126425c6a31b3ac5fea1cf4d9726f1fb38b9845fe923824a7c6ea5
     name: helm-chart-test
     type: application
     urls:
     - https://anrajme.github.io/helm-chart/helm-chart-test-0.1.0.tgz
     version: 0.1.0
-generated: "2023-09-15T16:27:18.67513+10:00"
+  redis:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-09-15T16:43:27.582819+10:00"
+    description: A Helm chart for Kubernetes
+    digest: eafa172633f6d54dd4c8528c8d3a75940e8849890bfd71e82ed4db62b955958e
+    name: redis
+    type: application
+    urls:
+    - https://anrajme.github.io/helm-chart/redis-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-09-15T16:43:27.582007+10:00"
